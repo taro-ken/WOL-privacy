@@ -1,0 +1,17 @@
+<BODY>
+    <article id="privacy" />
+
+    <script>
+        fetch('https://gensen.microcms.io/api/v1/privacy',
+            { headers: { "X-MICROCMS-API-KEY": "f01dfcf667e54d73b9c5300db11ae1ea5e58" } })
+            .then((res) => {
+                return res.json();
+            })
+            .then((json) => {
+                document.getElementById("privacy").innerHTML = json.body;
+            })
+            .catch((reason) => {
+                console.log(reason);
+            });
+    </script>
+</BODY>
